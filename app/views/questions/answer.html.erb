@@ -1,0 +1,14 @@
+<input type="text"
+  name="member"
+  value="<%= params[:member] %>"
+  <%if params[:member] == "I am going to work"%>
+  <%placeholder="Great!"%>
+  <%elsif params[:member]&.end_with?("?") %>
+  <%placeholder="Silly question, get dressed and go to work!."%>
+  <%else%>
+  <%placeholder="I don't care, get dressed and go to work!"%>
+  <%end%>
+  input type="text"
+  name="member"
+  value="<%= params[:member] %>"
+  placeholder="<%= placeholder %>">
