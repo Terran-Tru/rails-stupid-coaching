@@ -1,14 +1,6 @@
-<input type="text"
-  name="member"
-  value="<%= params[:member] %>"
-  <%if params[:member] == "I am going to work"%>
-  <%placeholder="Great!"%>
-  <%elsif params[:member]&.end_with?("?") %>
-  <%placeholder="Silly question, get dressed and go to work!."%>
-  <%else%>
-  <%placeholder="I don't care, get dressed and go to work!"%>
-  <%end%>
-  input type="text"
-  name="member"
-  value="<%= params[:member] %>"
-  placeholder="<%= placeholder %>">
+<h1>Coach's Answer</h1>
+
+<p><strong>You said:</strong> <%= @member %></p>
+<p><strong>Coach says:</strong> <%= @placeholder %></p>
+
+<%= link_to "Ask another question", ask_path, class: "btn btn-link mt-3" %>
